@@ -1,0 +1,85 @@
+.skill{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+
+}
+
+.skill-block{
+    padding-top: 20px;
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    background-color: rgb(17, 16, 22);
+    padding-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-block img{
+    width: 50px;
+
+}
+
+.skill h1{
+    color: white;
+}
+
+.skill .outline{
+    width: 20%;
+    height: 5px;
+    background-color:rgb(255, 196, 0);
+    position: relative;
+    animation: glow-box 2s ease-in-out infinite;
+}
+
+.skill-block img:hover{
+    position: relative;
+    top: 4px;
+}
+
+@keyframes glow-box{
+    0% {
+        box-shadow: rgba(255, 196, 0, 0.0) 0px 0px 20px;;
+    }
+
+    50% {
+        box-shadow: rgba(255, 196, 0, 1) 0px 0px 20px;
+    }
+
+    100% {
+         box-shadow: rgba(255, 196, 0, 0.0) 0px 0px 20px;
+    }
+}
+
+@media (max-width: 768px){
+
+
+    .skill{
+        height: auto;
+        padding: 20px 0;
+        width: 98%;
+    }
+
+    .skill-block{
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 95%;
+    }
+
+    .skill-block img{
+        width: 40px;
+    }
+
+    .skill .outline{
+        width: 40%;
+        margin-top: 10px;
+    }
+}

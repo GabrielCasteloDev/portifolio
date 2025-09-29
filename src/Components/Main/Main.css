@@ -1,0 +1,146 @@
+
+
+.main{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+
+}
+
+.main .block{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    
+}
+
+.main .line{
+    width: 30px;
+    height: 5px;
+    background-color:rgb(255, 196, 0);
+    animation: glow-box 4s ease-in-out infinite;
+    animation: append 4s ease-in-out infinite 0.5s;
+    transform-origin:left ;
+}
+
+.main .circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color:rgb(255, 196, 0);
+    margin-right: 3px;
+    animation: glow-box 2s ease-in-out infinite;
+    animation: append 4s ease-in-out infinite ;
+}
+
+.main h1{
+    font-size: 50px;
+    color: rgb(255, 196, 0);
+    animation: glow-text 3.5s ease-in-out infinite;
+}
+
+.main p{
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.main h3{
+    letter-spacing: 5px;
+    font-weight: 100;
+}
+
+.main .img-pack{
+    width: 31%;
+    height: 80vh;
+}
+
+.main .img-pack img{
+    width: 100%;
+}
+
+
+@keyframes glow-text{
+    0% {
+        text-shadow: rgba(255, 196, 0, 0.0) 0px 0px 40px;
+    }
+
+    50% {
+        text-shadow: rgba(255, 196, 0, 0.7) 0px 0px 40px;
+    }
+
+    100% {
+        text-shadow: rgba(255, 196, 0, 0.0) 0px 0px 40px;
+    }
+}
+
+@keyframes glow-box{
+    0% {
+        box-shadow: rgba(255, 196, 0, 0.0) 0px 0px 20px;;
+    }
+
+    50% {
+        box-shadow: rgba(255, 196, 0, 1) 0px 0px 20px;
+    }
+
+    100% {
+         box-shadow: rgba(255, 196, 0, 0.0) 0px 0px 20px;
+    }
+}
+
+@keyframes append{
+    0% {
+        transform: scaleX(0);
+    }
+
+    50% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+@media (max-width: 768px){
+    .main{
+        flex-direction: column;
+        text-align: center;
+        min-height: 85vh;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .main .img-pack{
+        width: 80%;
+        height: auto;
+    }
+
+    .main h1{
+        font-size: 40px;
+    }
+    
+    .main p{
+        font-size: 14px;
+    }
+
+    .main h3{
+        font-size: 16px;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

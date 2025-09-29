@@ -1,0 +1,88 @@
+.screen {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(17, 16, 22);
+}
+
+.panels{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(23, 22, 31);
+    margin-top: -17px;
+}
+
+.panel{
+    width: 100%;
+    display: block;
+    flex-direction: column;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen .buttons {
+    margin: 20px 0;
+}
+
+.screen .buttons button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  font-weight: 500;
+}
+
+
+.underline {
+  position: absolute;
+  bottom: -4px; /* distância do texto */
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color:rgb(255, 196, 0);
+  border-radius: 2px;
+  animation: button 5s ease-in-out infinite;
+}
+
+.screen .buttons button:active, .button:focus {
+  background-color: rgb(255, 196, 0);
+  border-radius: 20px 20px 0 0;
+  animation: button 0.3s ease;
+  color: black;
+}
+
+.screen .buttons .button.active {
+  background-color: rgb(255, 196, 0);
+  border-radius: 20px 20px 0 0;
+  animation: button 0.3s ease;
+  color: black;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+@keyframes button {
+    0% {
+        box-shadow: rgba(255, 196, 0, 0.0) 0px 0px 20px;
+    }
+
+    50% {
+        box-shadow: rgba(255, 196, 0, 1) 0px 0px 20px;
+    }
+
+    100% {
+         box-shadow: rgba(255, 196, 0, 0.0) 0px 0px 20px;
+    }
+}
